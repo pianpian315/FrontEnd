@@ -14,6 +14,9 @@ https://github.com/wasabeef/glide-transformations
 ### css-selectors
 https://github.com/chrsan/css-selectors
 
+### CSS Parser
+http://cssparser.sourceforge.net/gettingStarted.html
+
 ### juniversalchardet
 https://github.com/albfernandez/juniversalchardet
 
