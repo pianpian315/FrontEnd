@@ -2,12 +2,12 @@
 
 webpack的四个核心概念
 
-入口(entry)
-输出(output)
-loader
-插件(plugins)
+#### 入口(entry)
+#### 输出(output)
+#### loader
+#### 插件(plugins)
 
-1、入口(entry)
+### 1、入口(entry)
 
 前面说过，webpack可以通过代码模块之间的依赖关系来递归的构建一个模块关系图，所以首先需要指定一个递归遍历的起始点，也就是入口文件。
 
@@ -21,7 +21,7 @@ module.exports = {
 };
 
 
-2、出口(output)
+### 2、出口(output)
 
 前面说过，当找到模块之间的依赖关系之后，就需要对所有这些模块进行打包，最终输入一个或者多个bundle。output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件，默认值为 ./dist。
 
@@ -41,7 +41,7 @@ module.exports = {
 };
 ```
 
-3、loader
+### 3、loader
 
 loader主要用于将不同的文件加载到js文件中，使用loader进行处理，将其他webpack无法识别的文件类型转换为webpack能够处理的有效模块，然后你就可以利用 webpack 的打包能力，对它们进行处理。
 
@@ -70,7 +70,7 @@ module.exports = config;
 
 上面代码的作用就是告诉编译器：在打包之前，当遇到require()/import语句中被解析为'.txt'后缀的文件的时，需要先使用 raw-loader 转换处理一下。
 
-4、插件(plugins)
+### 4、插件(plugins)
 
 loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。插件接口功能极其强大，可以用来处理各种各样的任务。
 
