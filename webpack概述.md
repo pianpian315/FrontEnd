@@ -25,6 +25,7 @@ module.exports = {
 
 前面说过，当找到模块之间的依赖关系之后，就需要对所有这些模块进行打包，最终输入一个或者多个bundle。output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件，默认值为 ./dist。
 
+```
 webpack.config.js
 
 const path = require('path');
@@ -38,6 +39,7 @@ module.exports = {
     filename: 'my-first-webpack.bundle.js'
   }
 };
+```
 
 3、loader
 
@@ -49,7 +51,7 @@ loader主要用于将不同的文件加载到js文件中，使用loader进行处
 test 属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件。
 use 属性，表示进行转换时，应该使用哪个 loader。
 
-
+```
 const path = require('path');
 
 const config = {
@@ -64,6 +66,7 @@ const config = {
 };
 
 module.exports = config;
+```
 
 上面代码的作用就是告诉编译器：在打包之前，当遇到require()/import语句中被解析为'.txt'后缀的文件的时，需要先使用 raw-loader 转换处理一下。
 
@@ -71,6 +74,7 @@ module.exports = config;
 
 loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。插件接口功能极其强大，可以用来处理各种各样的任务。
 
+```
 webpack.config.js
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
@@ -89,7 +93,7 @@ const config = {
 };
 
 module.exports = config;
-
+```
 
 
 参考文章：https://webpack.docschina.org/concepts/
